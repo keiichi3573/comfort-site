@@ -789,21 +789,21 @@
   </footer>
 
   <script>
-      const heroImages = ["top1.jpg", "top2.jpg", "top3.jpg", "top4.jpg"];
-  let heroIndex = 0;
-  const heroImageEl = document.getElementById("heroImage");
+      const heroImages = ["top1.png", "top2.png", "top3.png", "top4.png"];
+let heroIndex = 0;
+const heroImageEl = document.getElementById("heroImage");
 
-  function showHeroImage() {
-    heroImageEl.src = heroImages[heroIndex];
-  }
+function showHeroImage() {
+  heroImageEl.src = heroImages[heroIndex];
+}
 
-  function nextHeroImage() {
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    showHeroImage();
-  }
-
+function nextHeroImage() {
+  heroIndex = (heroIndex + 1) % heroImages.length;
   showHeroImage();
-  setInterval(nextHeroImage, 4000);
+}
+
+showHeroImage();
+setInterval(nextHeroImage, 3000);
     
     const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
     const today = new Date();
