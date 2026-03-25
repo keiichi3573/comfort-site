@@ -528,7 +528,7 @@
 
       <div class="hero-image-card">
         <!-- 写真を追加したら src を変更してください -->
-        <img class="hero-image" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="美しいツヤ髪のイメージ">
+        <img id="heroImage" class="hero-image" src="top1.jpg" alt="Hair＆Make COMFORTのトップ画像">
       </div>
     </div>
   </header>
@@ -789,6 +789,22 @@
   </footer>
 
   <script>
+      const heroImages = ["top1.jpg", "top2.jpg", "top3.jpg", "top4.jpg"];
+  let heroIndex = 0;
+  const heroImageEl = document.getElementById("heroImage");
+
+  function showHeroImage() {
+    heroImageEl.src = heroImages[heroIndex];
+  }
+
+  function nextHeroImage() {
+    heroIndex = (heroIndex + 1) % heroImages.length;
+    showHeroImage();
+  }
+
+  showHeroImage();
+  setInterval(nextHeroImage, 4000);
+    
     const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
     const today = new Date();
     let currentYear = today.getFullYear();
