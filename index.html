@@ -528,7 +528,7 @@
 
       <div class="hero-image-card">
         <!-- 写真を追加したら src を変更してください -->
-        <img id="heroImage" class="hero-image" src="top1.png" alt="Hair＆Make COMFORTのトップ画像">
+        <img class="hero-image" src="salon-main.png" alt="Hair＆Make COMFORTの店内イメージ">
       </div>
     </div>
   </header>
@@ -624,6 +624,8 @@
             <li>白髪染めにも対応</li>
             <li>カラー後の残留薬剤除去まで丁寧に対応</li>
           </ul>
+          <img src="placenta-color.png" alt="プラセンタカラーの仕上がりイメージ" style="width:100%; border-radius:16px; margin-top:18px;">
+<p style="margin-top:10px; color:#666; font-size:0.95rem;">ツヤとやわらかさを大切にした、上品な仕上がり。</p>
         </article>
 
         <article class="menu-card">
@@ -642,6 +644,8 @@
             <li>年齢による髪質変化が気になる方におすすめ</li>
             <li>毎日のスタイリングを楽にしたい方にも</li>
           </ul>
+          <img src="tsuyakoi-treatment.png" alt="ツヤ恋トリートメントの仕上がりイメージ" style="width:100%; border-radius:16px; margin-top:18px;">
+<p style="margin-top:10px; color:#666; font-size:0.95rem;">まとまり・指通り・自然なツヤ感を目指した仕上がり。</p>
         </article>
 
         <article class="menu-card">
@@ -789,22 +793,6 @@
   </footer>
 
   <script>
-      const heroImages = ["top1.png", "top2.png", "top3.png", "top4.png"];
-let heroIndex = 0;
-const heroImageEl = document.getElementById("heroImage");
-
-function showHeroImage() {
-  heroImageEl.src = heroImages[heroIndex];
-}
-
-function nextHeroImage() {
-  heroIndex = (heroIndex + 1) % heroImages.length;
-  showHeroImage();
-}
-
-showHeroImage();
-setInterval(nextHeroImage, 3000);
-    
     const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
     const today = new Date();
     let currentYear = today.getFullYear();
