@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://keiichi3573.github.io/comfort-site/sitemap.xml
