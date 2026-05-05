@@ -136,56 +136,57 @@
     }
 
     .hero {
-      position: relative;
-      min-height: 860px;
-      color: #fff;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(20, 15, 14, 0.80) 0%, rgba(20, 15, 14, 0.60) 36%, rgba(20, 15, 14, 0.08) 70%, rgba(20, 15, 14, 0.05) 100%),
-        linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.25));
-    }
+  position: relative;
+  overflow: hidden;
+  min-height: 760px;
+  background: #f7f1eb;
+}
 
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(22, 17, 14, 0.38) 0%,
+    rgba(22, 17, 14, 0.18) 38%,
+    rgba(22, 17, 14, 0.08) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
 
-    .hero-bg img {
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 24%;
+  object-position: 58% 42%;
   filter: saturate(1.02) contrast(1.02);
 }
 
-    .hero-overlay-glow {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 22% 18%, rgba(228, 201, 156, 0.26), transparent 22%),
-        radial-gradient(circle at 60% 0%, rgba(255, 240, 211, 0.12), transparent 26%);
-      z-index: 1;
-      pointer-events: none;
-    }
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1240px, 96%);
+  margin: 0 auto;
+  padding: 110px 0 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      width: min(1180px, 92%);
-      margin: 0 auto;
-      padding: 120px 0 86px;
-      display: grid;
-      grid-template-columns: minmax(0, 520px) 1fr;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .hero-copy {
+.hero-copy {
+  width: min(520px, 92vw);
+  margin-left: 6px;
   padding: 34px 30px;
-  max-width: 620px;
-  background: linear-gradient(135deg, rgba(41, 31, 25, 0.50), rgba(41, 31, 25, 0.22));
-  border: 1px solid rgba(255,255,255,0.14);
+  background: linear-gradient(135deg, rgba(47, 36, 30, 0.52), rgba(47, 36, 30, 0.30));
+  border: 1px solid rgba(255,255,255,0.16);
   border-radius: 28px;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -834,57 +835,39 @@
       }
     }
 
-    @media (max-width: 760px) {
-      .section {
-        padding: 60px 0;
-      }
-
-      .hero-inner {
-        padding: 92px 0 70px;
-      }
-
-      .brand-main {
-        font-size: 3rem;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .concerns-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .reason-card {
-        grid-template-columns: 1fr;
-      }
-
-      .btn-main,
-      .btn-sub,
-      .btn-light {
-        width: 100%;
-      }
-    }
-
-    @media (max-width: 520px) {
+   @media (max-width: 760px) {
   .hero {
-    min-height: 620px;
-    background:
-      linear-gradient(180deg, rgba(20, 15, 14, 0.82) 0%, rgba(20, 15, 14, 0.74) 36%, rgba(20, 15, 14, 0.42) 100%);
+    min-height: auto;
+    padding-bottom: 0;
+    background: #f7f1eb;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero-bg {
+    position: relative;
+    height: 260px;
+    inset: auto;
   }
 
   .hero-bg img {
-    object-position: center 18%;
+    object-position: 58% 36%;
   }
 
   .hero-inner {
     width: min(94%, 94%);
-    padding: 72px 0 50px;
+    margin: -34px auto 0;
+    padding: 0 0 30px;
+    display: block;
   }
 
   .hero-copy {
+    width: 100%;
+    margin: 0;
     padding: 22px 18px;
-    background: linear-gradient(135deg, rgba(32, 24, 19, 0.62), rgba(32, 24, 19, 0.34));
+    background: linear-gradient(135deg, rgba(42, 31, 26, 0.88), rgba(42, 31, 26, 0.72));
     border-radius: 22px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -896,13 +879,13 @@
   }
 
   .brand-main {
-    font-size: 2.8rem;
+    font-size: 2.35rem;
     margin-bottom: 6px;
   }
 
   .brand-location {
     font-size: 0.9rem;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .brand-location::before,
@@ -911,15 +894,15 @@
   }
 
   .hero h1 {
-    font-size: 2.05rem;
-    line-height: 1.45;
+    font-size: 2rem;
+    line-height: 1.42;
     margin-bottom: 16px;
   }
 
   .hero-lead {
     font-size: 0.95rem;
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .hero-points {
@@ -933,6 +916,30 @@
   .hero-note {
     margin-top: 10px;
     font-size: 0.88rem;
+  }
+
+  .calendar-day {
+    min-height: 48px;
+    font-size: 0.88rem;
+  }
+}
+
+    @media (max-width: 520px) {
+  .hero-bg {
+    height: 220px;
+  }
+
+  .hero-bg img {
+    object-position: 58% 34%;
+  }
+
+  .brand-main {
+    font-size: 2.1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.45;
   }
 
   .calendar-day {
