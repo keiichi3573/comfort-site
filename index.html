@@ -750,6 +750,37 @@
   align-items: center;
   justify-content: center;
 }
+
+.recommend-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.recommend-item {
+  background: #fff;
+  border: 1px solid rgba(166, 124, 82, 0.18);
+  border-radius: 16px;
+  padding: 16px 18px 16px 46px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(90, 60, 50, 0.06);
+  line-height: 1.8;
+}
+
+.recommend-item::before {
+  content: "✓";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b8875f;
+  font-weight: 700;
+}
+
+.recommend-message {
+  margin-top: 26px;
+}
     
     .reserve-meta {
       margin-top: 18px;
@@ -1179,6 +1210,107 @@
   </div>
 </div>
 
+<section class="section section-soft" id="comfort-reasons">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">REASONS</p>
+      <h2>COMFORTが選ばれる理由</h2>
+      <p class="section-lead">
+        安曇野市・豊科で白髪染めや髪質改善をご検討の方に、
+        Hair＆Make COMFORTが大切にしているポイントをご紹介します。
+      </p>
+    </div>
+
+    <div class="reason-grid">
+      <div class="reason-card">
+        <div class="reason-num">1</div>
+        <div>
+          <h3>イオン豊科店2階で通いやすい</h3>
+          <p>
+            お買い物の前後や、お仕事帰りにも立ち寄りやすい便利な立地です。
+            イオン豊科店の駐車場をご利用いただけるため、お車でのご来店も安心です。
+          </p>
+        </div>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-num">2</div>
+        <div>
+          <h3>白髪染め・髪質改善に力を入れています</h3>
+          <p>
+            40代・50代のお客様を中心に、白髪やうねり、広がり、パサつきなどのお悩みに合わせた施術をご提案しています。
+          </p>
+        </div>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-num">3</div>
+        <div>
+          <h3>髪や頭皮への負担に配慮した施術</h3>
+          <p>
+            プラセンタやフルボ酸、カラー後に残りやすい薬剤への後処理などを取り入れ、
+            髪や頭皮への負担に配慮した施術を行っています。
+          </p>
+        </div>
+      </div>
+
+      <div class="reason-card">
+        <div class="reason-num">4</div>
+        <div>
+          <h3>丁寧なカウンセリング</h3>
+          <p>
+            お客様一人ひとりのお悩みやご希望をお伺いし、髪の状態に合わせて最適なメニューをご提案しています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">POLICY</p>
+      <h2>私たちが大切にしていること</h2>
+      <p class="section-lead">
+        Hair＆Make COMFORTでは、お客様一人ひとりのお悩みに寄り添い、
+        安心してご相談いただける美容室を目指しています。
+      </p>
+      <p class="section-lead">
+        「また来たい」と思っていただけるよう、丁寧なカウンセリングと、
+        一人ひとりに合わせたご提案を大切にしています。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-soft" id="recommend">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">RECOMMEND</p>
+      <h2>こんな方におすすめです</h2>
+      <p class="section-lead">
+        白髪染め・髪質改善・トリートメントで、髪の変化が気になり始めた方へ。
+        次のようなお悩みがある方は、お気軽にご相談ください。
+      </p>
+    </div>
+
+    <div class="recommend-list">
+      <div class="recommend-item">白髪染めを繰り返している方</div>
+      <div class="recommend-item">髪のうねりや広がりが気になる方</div>
+      <div class="recommend-item">ツヤやまとまりが欲しい方</div>
+      <div class="recommend-item">朝のお手入れを楽にしたい方</div>
+      <div class="recommend-item">髪や頭皮への負担が気になる方</div>
+      <div class="recommend-item">40代・50代になって髪質の変化を感じている方</div>
+    </div>
+
+    <p class="section-lead recommend-message">
+      どのメニューが自分に合っているか分からない方も、お気軽にご相談ください。
+      お客様に合わせたメニューをご提案いたします。
+    </p>
+  </div>
+</section>
+  
   <section class="section section-soft" id="video">
     <div class="container">
       <div class="section-subtitle">FEATURED MOVIE</div>
